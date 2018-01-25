@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Door Cut List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="static/styles/style.css"/>
+    <link rel='shortcut icon' type='image/x-icon' href='static/favicon.ico' />
+</head>
+<body>
+<div id="content">
+    <div id="topBar">
+        <div id="customerName">Customer Name: <input type="text" id="customerNameInput"></div>
+        <div id="topBarButtons">
+            <div id="saveButton" class="topBarButtons">Save</div>
+            <label for="openButton" class="topBarButtons">Open</label>
+            <input type="file" id="openButton" name="openButton" class="topBarButtons" accept=".dcl" style="display: none">
+            <div id="doorOptionsButton" class="topBarButtons"><span>Door Options</span></div>
+            <div id="printButton" class="topBarButtons"><span>Print</span></div>
+        </div>
+    </div>
+    <div id="optionsContainer">
+        <div id="optionsStyle">Door Style
+            <div id="raisedPanel"><input type="radio" id="raisedPanelRadio" name="style" checked value="Raised Panel"> Raised Panel</div>
+            <div id="shaker"><input type="radio" id="shakerRadio" name="style" value="Shaker"> Shaker</div>
+            <div id="beadPanel"><input type="radio" id="beadPanelRadio" name="style" value="Bead Flat Panel"> Bead Flat Panel</div>
+        </div>
+        <div id="optionsStile">Stile Width <input type="text" id="stileWidthInput" value="2.5"></div>
+        <div id="optionsRail">Rail Width <input type="text" id="railWidthInput" value="2.5"></div>
+        <div id="optionsButtons">
+            <div id="optionsSaveButton" class="optionsButtons">Save</div>
+        </div>
+    </div>
+    <div id="dataInput">
+        <div id="tags">
+            <div id="widthTag">Width</div>
+            <div id="heightTag">Height</div>
+            <div id="quantityTag">Quantity</div>
+            <div id="commentsTag">Comments</div>
+            <div id="doublePanelTag">Double Panel</div>
+            <div id="sashTag">Sash</div>
+        </div>
+        <div id="input">
+
+        </div>
+        <div id="inputButtons">
+            <div id="addDoorButton" class="button">Add Door</div>
+            <div id="addDrawerButton" class="button">Add Drawer</div>
+        </div>
+    </div>
+
+    <div id="printContainer">
+        <div id="printPrintButton" class="button">Print</div>
+        <div id="closeButton">X</div>
+        <div id="printHeader">
+            <div id="printCustomerName"></div>
+            <div id="printDate"></div>
+            <div id="printDoorStyle"></div>
+        </div>
+        <div id="printCutList">
+            <div id="printRailList" class="list">
+                <div id="printRailListHeader" class="listHeader">Rails <p></p></div>
+            </div>
+            <div id="printStileList" class="list">
+                <div id="printStileListHeader" class="listHeader">Stiles <p></p></div>
+            </div>
+            <div id="printPanelList" class="list">
+                <div id="printPanelListHeader" class="listHeader">Panels</div>
+            </div>
+            <div id="printDoorList" class="list">
+                <div id="printDoorListHeader" class="listHeader">Doors - <span></span></div>
+            </div>
+        </div>
+        <div id="printDrawerList" class="list">
+            <div id="printDrawerListHeader" class="listHeader">Drawers - <span></span></div>
+        </div>
+        <div id="printComments" class="list">
+            <div id="printCommentsHeader" class="listHeader">Comments:</div>
+            <div contenteditable="true" id="printCommentsTextarea"></div>
+        </div>
+    </div>
+
+    <div id="printFade"></div>
+</div>
+<script src="static/scripts/jquery-3.2.1.min.js"></script>
+<script src="static/scripts/fraction.js"></script>
+<script src="static/scripts/thenBy.js"></script>
+<script src="static/scripts/FileSaver.js"></script>
+<script src="static/scripts/script.js"></script>
+</body>
+</html>

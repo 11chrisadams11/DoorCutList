@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    outline:0;
+}
+
+#content {
+    font-family: 'Roboto', sans-serif;;
+}
+
+#topBar {
+    height: 40px;
+    width: 850px;
+    background: #6db0b7;
+    /*margin: 0 auto;*/
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    position: fixed;
+    z-index: 5;
+    vertical-align: middle;
+    line-height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#customerName {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#customerName input {
+    width: 220px;
+    height: 25px;
+    border-radius: 3px;
+    border: 0 solid white;
+    text-indent: 5px;
+    margin-left: 5px;
+}
+
+#customerName input:focus {
+    box-shadow: 0 0 14px #3e686f;
+}
+
+#topBarButtons {
+    float: right;
+    margin-right: 5px;
+}
+
+.topBarButtons {
+    width:110px;
+    height: 35px;
+    border-radius: 3px;
+    background: #3e686f;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 35px;
+    text-align: center;
+    right: 0;
+    /*position: absolute;*/
+    top: 12px;
+}
+
+.topBarButtons:hover {
+    cursor: pointer;
+    background: #355d64;
+}
+
+#saveButton {
+    opacity: 0;
+}
+
+#optionsContainer {
+    box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.9);
+    border-radius: 0 0 5px 5px;
+    width: 800px;
+    height: 110px;
+    padding: 10px;
+    /*margin: -131px auto 0;*/
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -88px;
+    z-index: 4;
+    background: white;
+}
+
+#optionsStyle {
+    display: inline-block;
+    padding: 5px;
+    width: 150px;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
+
+#raisedPanel {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#shaker, #beadPanel {
+    margin-left: 20px;
+}
+
+#optionsStile, #optionsRail {
+    position: absolute;
+    left: 310px;
+    top: 36px;
+}
+
+#optionsStile input, #optionsRail input {
+    position: absolute;
+    top: 0;
+    left: 90px;
+    border-radius: 3px;
+    border: 0 solid black;
+    box-shadow: 0 0 2px;
+    height: 20px;
+    width: 70px;
+    text-indent: 5px;
+}
+
+#optionsStile input:focus, #optionsRail input:focus {
+    box-shadow: 0 0 6px rgba(109, 176, 183, 1);
+}
+
+#optionsRail {
+    top: 72px;
+}
+
+#optionsButtons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.optionsButtons {
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+#optionsSaveButton {
+    background: #99d698;
+}
+
+#optionsSaveButton:hover {
+    background: #a7eaa6;
+}
+
+.optionsButtons:hover {
+    cursor: pointer;
+    background: #ededed;
+}
+
+#dataInput {
+    padding: 10px;
+    width: 850px;
+    margin: 65px auto 0;
+    position: relative;
+}
+
+#tags {
+    position: fixed;
+    z-index: 3;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 83%, rgba(255,255,255,0) 100%);
+    width: 850px;
+    top: 60px;
+    height: 40px;
+    margin-left: -6px;
+}
+
+#tags div {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#doublePanelTag {
+    left: 712px;
+}
+
+#sashTag {
+    left: 824px;
+}
+
+.label {
+    display: inline-block;
+}
+
+.label:hover {
+    cursor: pointer;
+    color: #de645c;
+}
+
+#input {
+    margin-top: 26px;
+}
+
+#input input {
+    position: absolute;
+}
+
+#input input[type='text'] {
+    height: 24px;
+    border: 0 solid black;
+    border-radius: 3px;
+    text-indent: 5px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.75);
+}
+
+#input input[type='text']:focus {
+    box-shadow: 0 0 6px rgba(109, 176, 183, 1);
+}
+
+#input input[type='checkbox'] {
+    margin-top: 5px;
+}
+
+.door, .drawer {
+    margin-bottom: 5px;
+    height: 25px;
+    position: relative;
+    opacity: 0;
+}
+
+.dWidth, .dHeight, .dQuantity, #widthTag, #heightTag, #quantityTag {
+    width: 100px;
+}
+
+#widthTag, .dWidth {
+    left: 92px;
+}
+
+#heightTag, .dHeight {
+    left: 212px;
+}
+
+#quantityTag, .dQuantity {
+    left: 332px;
+}
+
+.dQuantity {
+    text-indent: 0 !important;
+    text-align: center;
+}
+
+#commentsTag, .dComment {
+    left: 452px;
+    width: 240px;
+}
+
+.dDoublePanel {
+    left: 756px;
+}
+
+.dSash {
+    left: 832px;
+}
+
+#inputButtons {
+    margin: 20px auto 0 auto;
+    width: 208px;
+}
+
+.button {
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;
+    background: #e2e2e2;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #ededed;
+}
+
+.delete {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    height: 26px;
+    opacity: 0;
+}
+
+.delete div {
+    display: inline-block;
+}
+
+.deleteButton {
+    border-radius: 3px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;
+    background: #e2e2e2;
+    margin: 0 10px;
+}
+
+.deleteButton:hover {
+    cursor: pointer;
+    background: #ededed;
+}
+
+.deleteYes {
+    background: #de645c;
+    margin-left: 12px;
+}
+
+.deleteYes:hover {
+    background: #c96058;
+}
+
+#printContainer {
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+    width: 1000px;
+    padding: 70px 10px 50px 10px;
+    position: absolute;
+    top: -2000px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /*display: none;*/
+    font-size: 18px;
+}
+
+#printPrintButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#closeButton {
+    position: absolute;
+    right:  10px;
+    top: 5px;
+    color: #939393;
+    font-size: 20px;
+}
+
+#closeButton:hover {
+    cursor: pointer;
+    color: #de645c;
+}
+
+#printHeader {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto 35px;
+    font-size: 20px;
+}
+
+#printCustomerName {
+    font-size: 30px;
+}
+
+.listHeader {
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#printRailListHeader, #printStileListHeader {
+    margin-bottom: 10px;
+}
+
+#printRailListHeader p, #printStileListHeader p {
+    font-size: 14px;
+    font-weight: normal;
+    float: right;
+}
+
+.list {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    min-width: 130px;
+}
+
+.list p {
+    padding: 0 5px;
+    min-height: 28px;
+}
+
+.list .listItem:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+#printPanelList {
+    min-width: 170px;
+}
+
+#printDrawerList {
+    display: inline-block;
+    margin: 80px 0 0 20px;
+    min-width: 170px;
+}
+
+.list div {
+    display: inline-block;
+}
+
+.quant {
+    float: right;
+}
+
+.dQuant {
+    min-width: 55px;
+}
+
+.pWidth, .pHeight {
+    min-width: 70px;
+}
+
+.x {
+    width: 35px
+}
+
+sup, sub {
+    font-size: 13px;
+}
+
+sup {
+    margin-right: -1px;
+}
+
+sub {
+    margin-left: -2px;
+}
+
+#printComments {
+    margin-top: 80px;
+    float: right;
+    width: 400px;
+}
+
+#printCommentsTextarea {
+    display:inline-block;
+    border: solid 1px #000;
+    min-height: 100px;
+    width: 100%;
+    padding: 5px;
+}
+
+#printFade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: none;
+    z-index: 9;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printContainer * {
+        visibility: visible;
+    }
+
+    #printContainer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+    }
+}

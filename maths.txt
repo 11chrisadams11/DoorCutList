@@ -1,0 +1,28 @@
+If styleType = "raised" Or styleType = "beadFP" Then shaperCut = 0.5 Else shaperCut = 0.375
+
+stileSize = (Math.Ceiling((doorHeightArray(i).Text + 0.5) * 2) / 2)
+
+railSize = (doorWidthArray(i).Text - ((stileWidth * 2) - (shaperCut * 2)))
+
+If doorDPArray(i).Checked Then
+	DPQ = 2
+	If shaperCut = 0.5 Then
+		panelWSize = (doorWidth - ((stileWidth * 2) - (shaperCut * 2))) - 0.25
+		panelHSize = ((doorHeight - ((railWidth * 3) - (shaperCut * 4))) - 0.125) / 2
+	Else
+		panelWSize = (doorWidth - ((stileWidth * 2) - (shaperCut * 2))) - 0.125
+		panelHSize = (((doorHeight - ((railWidth * 3) - (shaperCut * 4)))) / 2) + 0.0625
+	End If
+Else
+	DPQ = 1
+	If styleType = "raised" Then
+		panelWSize = (doorWidth - ((stileWidth * 2) - (shaperCut * 2))) - 0.25
+		panelHSize = (doorHeight - ((railWidth * 2) - (shaperCut * 2))) - 0.125
+	ElseIf styleType = "beadFP" Then
+		panelWSize = (doorWidth - ((stileWidth * 2) - (0.5 * 2))) - 0.125
+		panelHSize = (doorHeight - ((railWidth * 2) - (0.5 * 2))) + 0.0625
+	Else
+		panelWSize = (doorWidth - ((stileWidth * 2) - (shaperCut * 2))) - 0.125
+		panelHSize = (doorHeight - ((railWidth * 2) - (shaperCut * 2))) + 0.0625
+	End If
+End If
